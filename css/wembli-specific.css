@@ -1,0 +1,18 @@
+body {
+
+}
+
+.navbar {
+	background: #08c;
+	color: #fff;
+
+}
+
+.muted {
+	color: #fff;
+}
+
+.badge-info {
+	background: #ffcc00;
+	color: #fff,
+}
