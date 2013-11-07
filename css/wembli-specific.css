@@ -3,7 +3,7 @@ body {
 }
 
 .navbar {
-	background: #08c;
+	background: #0e568e;
 	color: #fff;
 
 }
@@ -15,4 +15,12 @@ body {
 .badge-info {
 	background: #ffcc00;
 	color: #fff,
+}
+
+a {
+	color: #0e568e;
+}
+
+.nav-list>.active>a {
+	background-color: #0e568e;
 }
