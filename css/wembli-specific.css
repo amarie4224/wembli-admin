@@ -2,6 +2,15 @@ body {
 
 }
 
+.brand {
+	background-image: url("../images/wembli-logo.png");
+	background-repeat: no-repeat;
+	height: 10px;
+	width: 80px;
+	text-indent: -1000%;
+	margin-top: 10px;
+}
+
 .navbar {
 	background: #0e568e;
 	color: #fff;
@@ -24,4 +33,3 @@ a {
 .nav-list>.active>a {
 	background-color: #0e568e;
 }
-
