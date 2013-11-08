@@ -3,12 +3,11 @@ body {
 }
 
 .brand {
-	background-image: url("../images/wembli-logo.png");
+	background: url('../images/wembli-logo.png');
 	background-repeat: no-repeat;
-	height: 10px;
-	width: 80px;
-	text-indent: -1000%;
+	width: 100px;
 	margin-top: 10px;
+	text-indent: -1000%;
 }
 
 .navbar {
