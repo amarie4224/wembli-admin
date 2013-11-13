@@ -101,9 +101,14 @@
                                                 var metric = new Keen.Metric("view", {
                                                     analysisType: "count",
                                                     timeframe:"today",
-                                                    targetProperty:"visitorId",
+                                                    targetProperty:"visitorId"
                                                 });
-                                                metric.draw(document.getElementById('view-count'));
+                                                metric.draw(document.getElementById('view-count'), {
+                                                    label: "Today's Views",
+                                                    width: "50",
+                                                    'number-background-color': "#0e568e",
+                                                    'label-background-color': "#ffcc00"
+                                                });
                                               });
                                               
                                              </script> 
@@ -115,8 +120,17 @@
                                         <div id="count_unique">
                                             <script type="text/javascript">
                                               Keen.onChartsReady(function() {
-                                                var metric = new Keen.Metric("view", {analysisType: "count_unique",timeframe:"today",targetProperty:"visitorId"});
-                                                metric.draw(document.getElementById('count_unique'));
+                                                var metric = new Keen.Metric("view", {
+                                                    analysisType: "count_unique",
+                                                    timeframe:"today",
+                                                    targetProperty:"visitorId"
+                                                });
+                                                metric.draw(document.getElementById('count_unique'), {
+                                                    label: "Today's Unique Views",
+                                                    width: "50",
+                                                    'number-background-color': "#0e568e",
+                                                    'label-background-color': "#ffcc00"
+                                                });
                                               });
                                              </script> 
                                         </div> 
@@ -127,8 +141,18 @@
                                         <div id="plans-started">
                                             <script type="text/javascript">
                                               Keen.onChartsReady(function() {
-                                                var metric = new Keen.Metric("event", {analysisType: "count",timeframe:"today",targetProperty:"visitorId",  filters: [{"property_name":"action","operator":"eq","property_value":"start"}]});
-                                                metric.draw(document.getElementById('plans-started'));
+                                                var metric = new Keen.Metric("event", {
+                                                    analysisType: "count",
+                                                    timeframe:"today",
+                                                    targetProperty:"visitorId",
+                                                    filters: [{"property_name":"action","operator":"eq","property_value":"start"}]
+                                                });
+                                                metric.draw(document.getElementById('plans-started'), {
+                                                    label: "Events Created",
+                                                    width: "50",
+                                                    'number-background-color': "#0e568e",
+                                                    'label-background-color': "#ffcc00"
+                                                });
                                               });
                                              </script> 
                                         </div> 
@@ -145,7 +169,12 @@
                                                     targetProperty: "visitorId",
                                                     filters: [{"property_name":"type","operator":"eq","property_value":"signup"}]
                                                   });
-                                                    metric.draw(document.getElementById("signup-count"));
+                                                    metric.draw(document.getElementById("signup-count"), {
+                                                    label: "Today's Conversions",
+                                                    width: "50",
+                                                    'number-background-color': "#0e568e",
+                                                    'label-background-color': "#ffcc00"
+                                                  });
                                                 });
                                              </script> 
                                         </div> 
@@ -246,10 +275,6 @@
                     </div>
                 </div>
             </div>
-            <hr>
-            <footer>
-                <p>&copy; Wembli, Inc. 2013</p>
-            </footer>
         </div>
         <!--/.fluid-container-->
         <script src="vendors/jquery-1.9.1.min.js"></script>
@@ -264,5 +289,8 @@
         });
         </script>
     </body>
-
+    <footer>
+        <hr>
+        <p>&copy; Wembli, Inc. 2013</p>
+    </footer>
 </html>

@@ -2,13 +2,19 @@ body {
 
 }
 
+footer {
+	background-color: #e5e5e5;
+}
+
 .brand {
 	background: url('../images/wembli-logo.png');
 	background-repeat: no-repeat;
+	height: 10px;
 	width: 100px;
-	margin-top: 10px;
+	margin-top: 7px;
 	text-indent: -1000%;
 }
+
 
 .navbar {
 	background: #0e568e;
