@@ -2,7 +2,7 @@
 <html class="no-js">
     
     <head>
-        <title>Wembli Overall Numbers</title>
+        <title>Wembli Weekly Numbers</title>
         <!-- Bootstrap -->
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
@@ -79,45 +79,87 @@
                             <a href="daily.html"><i class="icon-chevron-right"></i> Daily (Charts)</a>
                         </li>
                         <li class="active">
-                            <a href="overall.html"><i class="icon-chevron-right"></i> Overall (Charts)</a>
+                            <a href="weekly.html"><i class="icon-chevron-right"></i> Weekly (Charts)</a>
                         </li>
                     </ul>
                 </div>
                 
                 <!--/span-->
                 <div class="span9" id="content">
-                    <div class="span9" id="content">
                     <div class="row-fluid">
-                        <!-- block -->
-                        <div class="block">
-                            <div class="navbar navbar-inner block-header">
-                                <div class="muted pull-left">Views</div>
-                            </div>
-                            <div class="block-content collapse in">
-                                <div class="span3"> 
-                                
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs">
+                          <li class="active"><a href="#home" data-toggle="tab">View's For The Previous 4 Weeks</a></li>
+                          <li><a href="#rsvp" data-toggle="tab">RSVP's For The Previous 4 Weeks</a></li>
+                          <li><a href="#signup" data-toggle="tab">Signup's For The Previous 4 Weeks</a></li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="home">
+                                <div class="block">
+                                    <div class="navbar navbar-inner block-header">
+                                        <div class="muted pull-left">Views</div>
+                                    </div>
+                                    <div class="block-content collapse in" id="weekly-views">
+                                        <script type="text/javascript">
+                                          Keen.onChartsReady(function() {
+                                              var series = new Keen.Series("view", {
+                                                analysisType: "count",
+                                                timeframe: "previous_4_weeks",
+                                                interval: "weekly"
+                                              });
+                                              series.draw(document.getElementById("weekly-views"), {
+                                                label: "Weekly Views",
+                                                width: "1000"
+                                              });
+                                            });
+                                        </script> 
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- block -->
-                        <div class="block">
-                            <div class="navbar navbar-inner block-header">
-                                <div class="muted pull-left">RSVP's</div>
-                            </div>
-                            <div class="block-content collapse in">
-                                <div class="span3"> 
-                                
+                            <div class="tab-pane fade" id="rsvp">
+                                <div class="block">
+                                    <div class="navbar navbar-inner block-header">
+                                        <div class="muted pull-left">RSVP's</div>
+                                    </div>
+                                    <div class="block-content collapse in" id="weekly-rsvp">
+                                        <script type="text/javascript">
+                                          Keen.onChartsReady(function() {
+                                              var series = new Keen.Series("rsvp", {
+                                                analysisType: "count",
+                                                timeframe: "previous_4_weeks",
+                                                interval: "weekly"
+                                              });
+                                              series.draw(document.getElementById("weekly-rsvp"), {
+                                                label: "Weekly RSVP",
+                                                width: "1000"
+                                              });
+                                            });
+                                        </script> 
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- block -->
-                        <div class="block">
-                            <div class="navbar navbar-inner block-header">
-                                <div class="muted pull-left">Signups</div>
-                            </div>
-                            <div class="block-content collapse in">
-                                <div class="span3"> 
-                                
+                            <div class="tab-pane fade" id="signup">
+                                <div class="block">
+                                    <div class="navbar navbar-inner block-header">
+                                        <div class="muted pull-left">Signup's</div>
+                                    </div>
+                                    <div class="block-content collapse in" id="weekly-signups">
+                                        <script type="text/javascript">
+                                          Keen.onChartsReady(function() {
+                                              var series = new Keen.Series("signup", {
+                                                analysisType: "count",
+                                                timeframe: "previous_4_weeks",
+                                                interval: "weekly"
+                                              });
+                                              series.draw(document.getElementById("weekly-signups"), {
+                                                label: "Weekly Signup's",
+                                                width: "1000"
+                                              });
+                                            });
+                                        </script> 
+                                    </div>
                                 </div>
                             </div>
                         </div>

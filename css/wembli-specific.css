@@ -18,7 +18,7 @@ footer {
 
 .navbar {
 	background: #0e568e;
-	color: #fff;
+	color: #0e568e;
 
 }
 
@@ -31,6 +31,12 @@ footer {
 	color: #fff,
 }
 
+ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+
 a {
 	color: #0e568e;
 }
@@ -38,3 +44,6 @@ a {
 .nav-list>.active>a {
 	background-color: #0e568e;
 }
+
+
+

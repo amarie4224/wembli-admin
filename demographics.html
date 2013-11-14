@@ -79,7 +79,7 @@
                             <a href="daily.html"><i class="icon-chevron-right"></i> Daily (Charts)</a>
                         </li>
                         <li>
-                            <a href="overall.html"><i class="icon-chevron-right"></i> Overall (Charts)</a>
+                            <a href="weekly.html"><i class="icon-chevron-right"></i> Weekly (Charts)</a>
                         </li>
                     </ul>
                 </div>
@@ -113,14 +113,20 @@
                             <div class="block">
                                 <div class="navbar navbar-inner block-header">
                                     <div class="muted pull-left">Browser Family </div>
-                                    <div class="pull-right"><span class="badge badge-info">752</span>
-
-                                    </div>
+                                    <div class="pull-right"></div>
                                 </div>
                                 <div class="block-content collapse in">
-                                    <table class="table table-striped">
-                                    
-                                    </table>
+                                    <div id="browser-family">
+                                        <script type="text/javascript">
+                                            Keen.onChartsReady(function() {
+                                              var metric = new Keen.Metric("view", {
+                                                analysisType: "count",
+                                                groupBy: "userAgentFamily"
+                                              });
+                                              metric.draw(document.getElementById("browser-family"));
+                                            });
+                                        </script>
+                                    </div>
                                 </div>
                             </div>
                             <!-- /block -->
@@ -155,22 +161,20 @@
                             <div class="block">
                                 <div class="navbar navbar-inner block-header">
                                     <div class="muted pull-left">Region</div>
-                                    <div class="pull-right"><span class="badge badge-info">812</span>
-
-                                    </div>
+                                    <div class="pull-right"></div>
                                 </div>
                                 <div class="block-content collapse in">
-                                    <table class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
-                                                <th>Email</th>
-                                            </tr>
-                                        </thead>
-                                        
-                                    </table>
+                                    <div id="region">
+                                        <script type="text/javascript">
+                                            Keen.onChartsReady(function() {
+                                              var metric = new Keen.Metric("view", {
+                                                analysisType: "count",
+                                                groupBy: "region"
+                                              });
+                                              metric.draw(document.getElementById("region"));
+                                            });
+                                        </script>
+                                    </div>
                                 </div>
                             </div>
                             <!-- /block -->
