@@ -81,6 +81,18 @@
                         <li>
                             <a href="weekly.html"><i class="icon-chevron-right"></i> Weekly (Charts)</a>
                         </li>
+                        <li>
+                            <a href="traffic.html"><i class="icon-chevron-right"></i> Traffic</a>
+                        </li>
+                        <li>
+                            <a href="conversions.html"><i class="icon-chevron-right"></i> Conversions</a>
+                        </li>
+                        <li>
+                            <a href="blog.html"><i class="icon-chevron-right"></i> Blog</a>
+                        </li>
+                        <li>
+                            <a href="social-networks.html"><i class="icon-chevron-right"></i> Social Networks</a>
+                        </li>
                     </ul>
                 </div>
                 
@@ -148,7 +160,7 @@
                                                     filters: [{"property_name":"action","operator":"eq","property_value":"start"}]
                                                 });
                                                 metric.draw(document.getElementById('plans-started'), {
-                                                    label: "Events Created",
+                                                    label: "Plans Started",
                                                     width: "50",
                                                     'number-background-color': "#0e568e",
                                                     'label-background-color': "#ffcc00"
@@ -163,14 +175,13 @@
                                         <div id="signup-count">
                                             <script type="text/javascript">
                                               Keen.onChartsReady(function() {
-                                                  var metric = new Keen.Metric("conversion", {
-                                                    analysisType: "count_unique",
+                                                  var metric = new Keen.Metric("signup", {
+                                                    analysisType: "count",
                                                     timeframe: "today",
-                                                    targetProperty: "visitorId",
-                                                    filters: [{"property_name":"type","operator":"eq","property_value":"signup"}]
+                                                    targetProperty: "visitorId"
                                                   });
                                                     metric.draw(document.getElementById("signup-count"), {
-                                                    label: "Today's Conversions",
+                                                    label: "Today's Signups",
                                                     width: "50",
                                                     'number-background-color': "#0e568e",
                                                     'label-background-color': "#ffcc00"
@@ -185,89 +196,124 @@
                         <!-- /block -->
                     </div>
                     <div class="row-fluid">
-                        <div class="span6">
+                        <div class="span3">
                             <!-- block -->
                             <div class="block">
                                 <div class="navbar navbar-inner block-header">
-                                    <div class="muted pull-left">Most Revent Views</div>
-                                    <div class="pull-right"><span class="badge badge-info">1,234</span>
-
-                                    </div>
-                                </div>
-                                <div class="block-content collapse in">
-                                    <table class="table table-striped">
-                                        
-                                     
-                                    </table>
-                                </div>
-                            </div>
-                            <!-- /block -->
-                        </div>
-                        <div class="span6">
-                            <!-- block -->
-                            <div class="block">
-                                <div class="navbar navbar-inner block-header">
-                                    <div class="muted pull-left">Most Recent Visitors </div>
-                                    <div class="pull-right"><span class="badge badge-info">752</span>
-
-                                    </div>
-                                </div>
-                                <div class="block-content collapse in">
-                                    <table class="table table-striped">
-                                    
-                                    </table>
-                                </div>
-                            </div>
-                            <!-- /block -->
-                        </div>
-                    </div>
-                    <div class="row-fluid">
-                        <div class="span6">
-                            <!-- block -->
-                            <div class="block">
-                                <div class="navbar navbar-inner block-header">
-                                    <div class="muted pull-left">Most Recent Plans Started</div>
+                                    <div class="muted pull-left">Recent Plans Started</div>
                                     <div class="pull-right"><span class="badge badge-info">17</span>
 
                                     </div>
                                 </div>
                                 <div class="block-content collapse in">
-                                    <table class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
-                                                <th>Email</th>
-                                            </tr>
-                                        </thead>
-                                        
-                                    </table>
+                                    <ul id="plan-list">
+                                        <li class="plan-row header clearfix">
+                                            <div class="span1">#</div>
+                                            <div class="span11">Plan Name</div>
+                                        </li>
+                                        <li class="plan-row">
+                                            <a href="plan-profile.html" class="clearfix">
+                                                <div class="span1">1</div>
+                                                <div class="span11">Wicked</div>
+                                            </a>
+                                        </li>
+                                        <li class="plan-row">
+                                            <a href="plan-profile.html" class="clearfix">
+                                                <div class="span1">2</div>
+                                                <div class="span11">Derrick Trucks</div>
+                                            </a>
+                                        </li>
+                                        <li class="plan-row">
+                                            <a href="plan-profile.html" class="clearfix">
+                                                <div class="span1">3</div>
+                                                <div class="span11">Washington Red Skins</div>
+                                            </a>
+                                        </li>
+                                        <li class="plan-row">
+                                            <a href="plan-profile.html" class="clearfix">
+                                                <div class="span1">4</div>
+                                                <div class="span11">Eagels</div>
+                                            </a>
+                                        </li>
+                                        <li class="plan-row">
+                                            <a href="plan-profile.html" class="clearfix">
+                                                <div class="span1">5</div>
+                                                <div class="span11">San Diego Chargers</div>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                             <!-- /block -->
                         </div>
-                        <div class="span6">
+                        <div class="span9">
                             <!-- block -->
                             <div class="block">
                                 <div class="navbar navbar-inner block-header">
-                                    <div class="muted pull-left">Most Recent Signups</div>
+                                    <div class="muted pull-left">Recent Signups</div>
                                     <div class="pull-right"><span class="badge badge-info">812</span>
 
                                     </div>
                                 </div>
                                 <div class="block-content collapse in">
-                                    <table class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
-                                                <th>Email</th>
-                                            </tr>
-                                        </thead>
-                                        
-                                    </table>
+                                    <ul>
+                                        <li class="signup-row header clearfix">
+                                            <div class="span1">#</div>
+                                            <div class="span3">First Name</div>
+                                            <div class="span3">Last Name</div>
+                                            <div class="span5">Email</div>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li class="signup-row">
+                                            <a href="customer-profile.html" class="clearfix">
+                                                <div class="span1">1</div>
+                                                <div class="span3">Ashley</div>
+                                                <div class="span3">Stanley</div>
+                                                <div class="span5">ashley@wembli.com</div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li class="signup-row">
+                                            <a href="customer-profile.html" class="clearfix">
+                                                <div class="span1">2</div>
+                                                <div class="span3">Kim</div>
+                                                <div class="span3">Walpole</div>
+                                                <div class="span5">kim@wembli.com</div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li class="signup-row">
+                                            <a href="customer-profile.html" class="clearfix">
+                                                <div class="span1">3</div>
+                                                <div class="span3">Tom</div>
+                                                <div class="span3">Walpole</div>
+                                                <div class="span5">tom@wembli.com</div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li class="signup-row">
+                                            <a href="customer-profile.html" class="clearfix">
+                                                <div class="span1">4</div>
+                                                <div class="span3">Diego</div>
+                                                <div class="span3">Ojeda</div>
+                                                <div class="span5">diego@wembli.com</div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li class="signup-row">
+                                            <a href="customer-profile.html" class="clearfix">
+                                                <div class="span1">5</div>
+                                                <div class="span3">Josh</div>
+                                                <div class="span3">Stanley</div>
+                                                <div class="span5">josh@wembli.com</div>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                             <!-- /block -->

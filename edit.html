@@ -2,10 +2,11 @@
 <html class="no-js">
     
     <head>
-        <title>Wembli Conversions</title>
+        <title>Wembli Social Network Stats</title>
         <!-- Bootstrap -->
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+        <link rel="stylesheet" href="font-awesome-4.0.3/css/font-awesome.css">
         <link href="vendors/easypiechart/jquery.easy-pie-chart.css" rel="stylesheet" media="screen">
         <link href="assets/styles.css" rel="stylesheet" media="screen">
         <link href="css/wembli-specific.css" rel="stylesheet" media="screen">
@@ -53,10 +54,10 @@
                             </li>
                         </ul>
                         <ul class="nav">
-                            <li class="active">
+                            <li class="inactive">
                                 <a href="index.html">Dashboard</a>
                             </li>
-                            <li class="inactive">
+                            <li class="active">
                                 <a href="seo.html">SEO</a>
                             </li>
                         </ul>
@@ -67,83 +68,33 @@
         </div>
         <div class="container-fluid">
             <div class="row-fluid">
-                <div class="span3" id="sidebar">
-                    <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
-                        <li>
-                            <a href="index.html"><i class="icon-chevron-right"></i> Today</a>
-                        </li>
-                        <li>
-                            <a href="demographics.html"><i class="icon-chevron-right"></i> Demographics</a>
-                        </li>
-                        <li>
-                            <a href="daily.html"><i class="icon-chevron-right"></i> Daily (Charts)</a>
-                        </li>
-                        <li>
-                            <a href="weekly.html"><i class="icon-chevron-right"></i> Weekly (Charts)</a>
-                        </li>
-                        <li>
-                            <a href="traffic.html"><i class="icon-chevron-right"></i> Traffic</a>
-                        </li>
-                        <li class="active">
-                            <a href="conversions.html"><i class="icon-chevron-right"></i> Conversions</a>
-                        </li>
-                        <li>
-                            <a href="blog.html"><i class="icon-chevron-right"></i> Blog</a>
-                        </li>
-                        <li>
-                            <a href="social-networks.html"><i class="icon-chevron-right"></i> Social Networks</a>
-                        </li>
-                    </ul>
-                </div>
-                
                 <!--/span-->
-                <div class="span9" id="content">
+                <div class="span12" id="content">
                     <div class="row-fluid">
-                        <!-- block -->
                         <div class="block">
                             <div class="navbar navbar-inner block-header">
-                                <div class="muted pull-left">By Social Network</div>
+                                <div class="muted pull-left">edit</div>
                             </div>
                             <div class="block-content collapse in">
-                                <div class="span3"> 
-                                
-                                </div>
-                            </div>
-                        </div>
-                        <!-- block -->
-                        <div class="block">
-                            <div class="navbar navbar-inner block-header">
-                                <div class="muted pull-left">By Search Query</div>
-                            </div>
-                            <div class="block-content collapse in">
-                                <div class="span3"> 
-                                
-                                </div>
-                            </div>
-                        </div>
-                        <!-- block -->
-                        <div class="block">
-                            <div class="navbar navbar-inner block-header">
-                                <div class="muted pull-left">By Traffic Source</div>
-                            </div>
-                            <div class="block-content collapse in">
-                                <div class="span3"> 
-                                
-                                </div>
-                            </div>
-                        </div>
-                        <div class="block">
-                            <div class="navbar navbar-inner block-header">
-                                <div class="muted pull-left">Signup Converstion Rate</div>
-                            </div>
-                            <div class="block-content collapse in">
-                                <div class="span3"> 
-                                
-                                </div>
+                                <div class="block-content collapse in">
+                                    <div class="back">
+                                        <a href="seo.html"><i class="fa fa-reply"></i> Back to list of URL's</a>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <form id="seo-edit" action="seo.html" method="get">
+                                        <input type="text" class="form-control" placeholder="Title">
+                                        <textarea class="field span12" id="textarea" rows="6" placeholder="Meta Description"></textarea>
+                                        <div class="btn-group">
+                                          <input type="submit" class="btn btn-default" value="Save"/>
+                                        </div>
+                                    </form>
+                                </div>   
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
             <hr>
             <footer>
@@ -156,12 +107,5 @@
         <script src="vendors/easypiechart/jquery.easy-pie-chart.js"></script>
         <script src="assets/scripts.js"></script>
         <script src="js/wembli-specific.js"></script>
-        <script>
-        $(function() {
-            // Easy pie charts
-            $('.chart').easyPieChart({animate: 1000});
-        });
-        </script>
     </body>
-
 </html>

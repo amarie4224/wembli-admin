@@ -1,7 +1,3 @@
-body {
-
-}
-
 footer {
 	background-color: #e5e5e5;
 }
@@ -41,9 +37,65 @@ a {
 	color: #0e568e;
 }
 
-.nav-list>.active>a {
+.nav-list > .active > a {
 	background-color: #0e568e;
 }
+
+.back {
+	text-decoration: none;
+}
+
+.header {
+	font-weight: bold;
+}
+
+.plan-row > a {
+	display: block;
+	padding: 6px;
+}
+
+.plan-row:hover > a {
+	background-color: #ffcc00;
+	color: white;
+}
+
+.plan-row > a > div {
+	line-height: 30px;
+	vertical-align: middle;
+}
+
+.number {
+	float: left
+}
+
+.plan-name {
+	float: left
+}
+
+.signup-row > a {
+	display: block;
+	padding: 6px;
+}
+
+.signup-row:hover > a {
+	background-color: #ffcc00;
+	color: white;
+}
+
+.signup-row > a > div {
+	line-height: 30px;
+	vertical-align: middle;
+}
+
+.profile-pic {
+	float: left;
+	height: 20%;
+	width: 20%;
+	padding-right: 10px;
+}
+
+
+
 
 
 

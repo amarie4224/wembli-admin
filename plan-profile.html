@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html class="no-js">
+    
+    <head>
+        <title>Wembli Admin Home Page</title>
+        <!-- Bootstrap -->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+        <link href="vendors/easypiechart/jquery.easy-pie-chart.css" rel="stylesheet" media="screen">
+        <link href="assets/styles.css" rel="stylesheet" media="screen">
+        <link href="css/wembli-specific.css" rel="stylesheet" media="screen">
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script src="vendors/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script type="text/javascript">
+            var Keen=Keen||{configure:function(e){this._cf=e},addEvent:function(e,t,n,i){this._eq=this._eq||[],this._eq.push([e,t,n,i])},setGlobalProperties:function(e){this._gp=e},onChartsReady:function(e){this._ocrq=this._ocrq||[],this._ocrq.push(e)}};(function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://":"http://")+"dc8na2hxrj29i.cloudfront.net/code/keen-2.1.0-min.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+
+            // Configure the Keen object with your Project ID and (optional) access keys.
+            Keen.configure({
+                projectId: "51818c9d897a2c51e2000003",
+                readKey: "b1028a5b11fa349ea9240249145e97cf4ca552c1e03875b955c51f960189b833f566ecf98b4260aa98a2fe1119720477a8614ac44807545eb897a94762dce9ea3bc34a515dcfbd3d2138f15543e47a3e57c07fc2209b77b8dc469cd164117fa6a11907662b2647f4faa1d7d323c70097"    // required for doing analysis
+            });
+        </script>
+        <link rel="shortcut icon" href="images/wembli-favicon.ico">
+    </head>
+    
+    <body>
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="index.html">Wembli Admin Panel</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right">
+                            <li class="dropdown">
+                                <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i> #{name} <i class="caret"></i>
+
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a tabindex="-1" href="#">Profile</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a tabindex="-1" href="login.html">Logout</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav">
+                            <li class="active">
+                                <a href="index.html">Dashboard</a>
+                            </li>
+                            <li class="inactive">
+                                <a href="seo.html">SEO</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12" id="content">
+                    <div class="row-fluid">
+                        <!-- block -->
+                        <div class="block">
+                            <div class="navbar navbar-inner block-header">
+                                <div class="muted pull-left">Plan Profile</div>
+                            </div>
+                            <div class="block-content collapse in">  
+                               <ul class="nav nav-tabs">
+                                  <li class="active"><a href="#home" data-toggle="tab">Overview</a></li>
+                                  <li><a href="#tickets" data-toggle="tab">Tickets</a></li>
+                                  <li><a href="#friends-invited" data-toggle="tab">Friends Invited</a></li>
+                                  <li><a href="#restaurant" data-toggle="tab">Restaurant Deals</a></li>
+                                  <li><a href="#parking" data-toggle="tab">Parking</a></li>
+                                </ul>
+                                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="home">
+                         <div class="row-fluid">
+                            <div class="span12">
+                                <!-- block -->
+                                <div class="block">
+                                    <div class="navbar navbar-inner block-header">
+                                        <div class="muted pull-left">Overview </div>
+                                        <div class="pull-right"></div>
+                                    </div>
+                                    <div class="block-content collapse in">
+                                        <div>
+                                            <ul>
+                                                <li>
+                                                    <div class="span6 header">Plan Name</div>
+                                                    <div class="span6">Wicked</div>
+                                                </li>
+                                                <li>
+                                                    <div class="span6 header">Venue Name</div>
+                                                    <div class="span6">Gershwin Theater</div>
+                                                </li>
+                                                <li>
+                                                    <div class="span6 header">Number of Friends</div>
+                                                    <div class="span6">4</div>
+                                                </li>
+                                                <li>
+                                                    <div class="span6 header">Date Of Event</div>
+                                                    <div class="span6">November 27, 2013</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /block -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tickets">
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <!-- block -->
+                                <div class="block">
+                                    <div class="navbar navbar-inner block-header">
+                                        <div class="span12 muted pull-left">
+                                        <ul>
+                                            <li class="span3 clearfix">Section</li>
+                                            <li class="span2 clearfix">Row</li>
+                                            <li class="span2 clearfix">Seats</li>
+                                            <li class="span2 clearfix">Price</li>
+                                            <li class="span1 clearfix">Purchased</li>
+                                        </ul>
+                                        </div>
+                                    </div>
+                                    <div class="block-content collapse in">
+                                        <ul>
+                                            <li class="plan-row">
+                                                <div class="span3">Center Orchestra</div>
+                                                <div class="span2">H</div>
+                                                <div class="span2">151-154</div>
+                                                <div class="span2">$325</div>
+                                                <div class="span1">Yes</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="friends-invited">
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <!-- block -->
+                                <div class="block">
+                                    <div class="navbar navbar-inner block-header">
+                                        <div class="span12 muted pull-left">
+                                        <ul>
+                                            <li class="span3 clearfix">First Name</li>
+                                            <li class="span3 clearfix">Last Name</li>
+                                            <li class="span3 clearfix">Way Invited</li>
+                                            <li class="span3 clearfix">RSVP?</li>
+                                        </ul>
+                                        </div>
+                                    </div>
+                                    <div class="block-content collapse in">
+                                        <ul>
+                                            <li class="plan-row">
+                                                <a href="friend-profile.html" class="clearfix">
+                                                    <div class="span3">Ashley</div>
+                                                    <div class="span3">Stanley</div>
+                                                    <div class="span3">Organizer</div>
+                                                    <div class="span3">Yes</div>
+                                                </a>
+                                            </li>
+                                            <li class="plan-row">
+                                                <a href="friend-profile.html" class="clearfix">
+                                                    <div class="span3">Kim</div>
+                                                    <div class="span3">Walpole</div>
+                                                    <div class="span3">Facebook</div>
+                                                    <div class="span3">Yes</div>
+                                                </a>
+                                            </li>
+                                            <li class="plan-row">
+                                                <a href="friend-profile.html" class="clearfix">
+                                                    <div class="span3">Tom</div>
+                                                    <div class="span3">Walpole</div>
+                                                    <div class="span3">Twitter</div>
+                                                    <div class="span3">Yes</div>
+                                                </a>
+                                            </li>
+                                            <li class="plan-row">
+                                                <a href="friend-profile.html" class="clearfix">
+                                                    <div class="span3">Josh</div>
+                                                    <div class="span3">Stanley</div>
+                                                    <div class="span3">Email</div>
+                                                    <div class="span3">Yes</div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="restaurant">
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <!-- block -->
+                                <div class="block">
+                                    <div class="navbar navbar-inner block-header">
+                                        <div class="span12 muted pull-left">
+                                        <ul>
+                                            <li class="span3 clearfix">Restaurant Name</li>
+                                            <li class="span3 clearfix">Discount</li>
+                                            <li class="span3 clearfix">Price</li>
+                                            <li class="span3 clearfix">Purchased?</li>
+                                        </ul>
+                                        </div>
+                                    </div>
+                                    <div class="block-content collapse in">
+                                        <ul>
+                                            <li class="plan-row">
+                                                <div class="span3">Ellen's Stardust Dinner</div>
+                                                <div class="span3">$25 off $75 bill or more</div>
+                                                <div class="span3">$30</div>
+                                                <div class="span3">Yes</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="parking">
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <!-- block -->
+                                <div class="block">
+                                    <div class="navbar navbar-inner block-header">
+                                        <div class="span12 muted pull-left">
+                                        <ul>
+                                            <li class="span4 clearfix">Name of Structure</li>
+                                            <li class="span4 clearfix">Price</li>
+                                            <li class="span4 clearfix">Purchased</li>
+                                        </ul>
+                                        </div>
+                                    </div>
+                                    <div class="block-content collapse in">
+                                        <ul>
+                                            <li class="plan-row">
+                                                <div class="span4">Central Parking</div>
+                                                <div class="span4">$30 for 6 hours</div>
+                                                <div class="span4">Yes</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--/.fluid-container-->
+        <script src="vendors/jquery-1.9.1.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="vendors/easypiechart/jquery.easy-pie-chart.js"></script>
+        <script src="assets/scripts.js"></script>
+        <script src="js/wembli-specific.js"></script>
+        <script>
+        $(function() {
+            // Easy pie charts
+            $('.chart').easyPieChart({animate: 1000});
+        });
+        </script>
+    </body>
+    <footer>
+        <hr>
+        <p>&copy; Wembli, Inc. 2013</p>
+    </footer>
+</html>

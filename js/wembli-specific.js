@@ -9,3 +9,4 @@ $('.parent').click(function() {
         $(subMenu).removeClass('closed').addClass('open');
     }
 });
+

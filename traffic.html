@@ -2,7 +2,7 @@
 <html class="no-js">
     
     <head>
-        <title>Wembli Conversions</title>
+        <title>Wembli Traffic</title>
         <!-- Bootstrap -->
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
@@ -81,10 +81,10 @@
                         <li>
                             <a href="weekly.html"><i class="icon-chevron-right"></i> Weekly (Charts)</a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="traffic.html"><i class="icon-chevron-right"></i> Traffic</a>
                         </li>
-                        <li class="active">
+                        <li>
                             <a href="conversions.html"><i class="icon-chevron-right"></i> Conversions</a>
                         </li>
                         <li>
@@ -95,60 +95,106 @@
                         </li>
                     </ul>
                 </div>
-                
                 <!--/span-->
+                
                 <div class="span9" id="content">
                     <div class="row-fluid">
-                        <!-- block -->
-                        <div class="block">
-                            <div class="navbar navbar-inner block-header">
-                                <div class="muted pull-left">By Social Network</div>
-                            </div>
-                            <div class="block-content collapse in">
-                                <div class="span3"> 
-                                
+                            <div class="span6">
+                                <!-- block -->
+                                <div class="block">
+                                    <div class="navbar navbar-inner block-header">
+                                        <div class="muted pull-left">Sources</div>
+                                    </div>
+                                    <div class="block-content collapse in">
+                                        
+                                    </div>
                                 </div>
+                                <!-- /block -->
+                            </div>
+                            <div class="span6">
+                                <!-- block -->
+                                <div class="block">
+                                    <div class="navbar navbar-inner block-header">
+                                        <div class="muted pull-left">What Page Do They Enter On</div>
+                                    </div>
+                                    <div class="block-content collapse in">
+                                        
+                                    </div>
+                                </div>
+                                <!-- /block -->
                             </div>
                         </div>
-                        <!-- block -->
-                        <div class="block">
-                            <div class="navbar navbar-inner block-header">
-                                <div class="muted pull-left">By Search Query</div>
-                            </div>
-                            <div class="block-content collapse in">
-                                <div class="span3"> 
-                                
+                        <div class="row-fluid">
+                            <div class="span6">
+                                <!-- block -->
+                                <div class="block">
+                                    <div class="navbar navbar-inner block-header">
+                                        <div class="muted pull-left">Top Viewed Pages</div>
+                                    </div>
+                                    <div class="block-content collapse in">
+                                        
+                                    </div>
                                 </div>
+                                <!-- /block -->
+                            </div>
+                            <div class="span6">
+                                <!-- block -->
+                                <div class="block">
+                                    <div class="navbar navbar-inner block-header">
+                                        <div class="muted pull-left">Keywords</div>
+                                    </div>
+                                    <div class="block-content collapse in">
+                                        
+                                    </div>
+                                </div>
+                                <!-- /block -->
                             </div>
                         </div>
-                        <!-- block -->
-                        <div class="block">
-                            <div class="navbar navbar-inner block-header">
-                                <div class="muted pull-left">By Traffic Source</div>
-                            </div>
-                            <div class="block-content collapse in">
-                                <div class="span3"> 
-                                
+                        <div class="row-fluid">
+                            <div class="span6">
+                                <!-- block -->
+                                <div class="block">
+                                    <div class="navbar navbar-inner block-header">
+                                        <div class="muted pull-left">Search Engine</div>
+                                    </div>
+                                    <div class="block-content collapse in">
+                                        
+                                    </div>
                                 </div>
+                                <!-- /block -->
                             </div>
-                        </div>
-                        <div class="block">
-                            <div class="navbar navbar-inner block-header">
-                                <div class="muted pull-left">Signup Converstion Rate</div>
-                            </div>
-                            <div class="block-content collapse in">
-                                <div class="span3"> 
-                                
+                            <div class="span6">
+                                <!-- block -->
+                                <div class="block">
+                                    <div class="navbar navbar-inner block-header">
+                                        <div class="muted pull-left">Users By City</div>
+                                    </div>
+                                    <div class="block-content collapse in" id="users-by-city">
+                                        <script type="text/javascript">
+                                            Keen.onChartsReady(function() {
+                                              var metric = new Keen.Metric("view", {
+                                                analysisType: "count",
+                                                groupBy: "city"
+                                              });
+                                              metric.draw(document.getElementById("users-by-city"), {
+                                                label: "Users By City",
+                                                width: "450"
+                                              });
+                                            });
+                                        </script>
+                                    </div>
                                 </div>
+                                <!-- /block -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <hr>
-            <footer>
-                <p>&copy; Wembli, Inc. 2013</p>
-            </footer>
+        </div>
+        <hr>
+        <footer>
+            <p>&copy; Wembli, Inc. 2013</p>
+        </footer>
         </div>
         <!--/.fluid-container-->
         <script src="vendors/jquery-1.9.1.min.js"></script>
